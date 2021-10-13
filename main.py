@@ -175,7 +175,7 @@ fig5a = px.box(insurance_df, x="age_bracket", y="expenses", points="all",
                color="region", color_discrete_sequence=colors_region, facet_row="smoker",
                category_orders={"age_bracket": sorted(list(set(insurance_df.age_bracket.values)))})
 
-# fig5a.show()
+fig5a.show()
 # we observe that "non-smokers" have many outliers across all age bracket groups; we question if the burden of medical
 # costs has been transferred to those who "non-smokers" who have gotten insurance
 # non-smokers are charged roughly the same price across all age bracket groups, except for quite a few outliers
@@ -190,7 +190,7 @@ fig5b = px.box(insurance_df, x="bmi_bracket", y="expenses", points="all",
                color="sex", color_discrete_sequence=colors_sex, facet_row="smoker",
                category_orders={"bmi_bracket": sorted(list(set(insurance_df.bmi_bracket.values)))})
 
-# fig5b.show()
+fig5b.show()
 # we observe that "non-smokers" pay almost the same price all BMI bracket group
 # "smokers" can pay up to 4 times more premium than "non-smokers"
 # "smokers" in the last two BMI groups (32.2 to 35.9 and 36 to 53.1) pay double
@@ -202,7 +202,7 @@ fig5c = px.box(insurance_df, x="children", y="expenses", points="all",
                color="smoker", color_discrete_sequence=colors_smoker, facet_row="sex",
                category_orders={"children": sorted(list(set(insurance_df.children.values)))})
 
-# fig5c.show()
+fig5c.show()
 # female and male "non-smokers" generally pay about the same expenses across the "number of children" category
 # female "smokers" are generally paying lower expenses than its male "smokers" counterparts across all categories
 # we do not see a lot of "smokers" having at least four children
@@ -215,7 +215,7 @@ colorscale4 = [[0, "#C5C0F3"], [0.5, "white"], [1, "#5B84B1"]]
 trace4 = go.Heatmap(z=correlation_df.values, x=correlation_df.index.values, y=correlation_df.columns.values,
                     colorscale=colorscale4)
 fig6 = go.Figure(data=trace4)
-# fig6.show()
+fig6.show()
 # apart from the percentile rank columns that are engineered from (and hence correlated with) the "age" and "bmi"
 # variables, the other variables are not poorly correlated (no uncorrelated variables)
 
