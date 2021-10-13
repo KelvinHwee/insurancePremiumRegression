@@ -63,7 +63,6 @@ pd.set_option('display.max_columns', None)
 - premiums
 '''
 
-
 insurance_df = pd.read_csv('insurance.csv')
 print("We look at a sample of the data: \n", insurance_df.head())
 print("We also look at some additional data information: \n", insurance_df.info())
@@ -78,7 +77,7 @@ print("Next we try to count the instances of missing values (if any): \n", insur
 
 - kurtosis: a measure of whether or not a distribution is heavy-tailed or light-tailed
 - for reference, kurtosis of a normal distribution is 3. A distribution with kurtosis less than 3 is said to produce 
-- fewwer and less extreme outliers than the normal distribution; more than 3 means more outliers than the normal dist
+- fewer and less extreme outliers than the normal distribution; more than 3 means more outliers than the normal dist
 - a negative kurtosis means that the distribution is flatter than a normal curve with same mean and standard deviation
 '''
 
@@ -140,7 +139,7 @@ data_vars2 = [insurance_df[col].to_list() for col in
 
 fig3 = FF.create_distplot(data_vars2, group_labels=numerical_vars2, bin_size=[0.1, 0.1], colors=["#52B2BF", "#241571"],
                           curve_type="normal", show_rug=False)
-# fig3.show()
+fig3.show()
 
 
 #######################################################################################################################
