@@ -63,6 +63,7 @@ pd.set_option('display.max_columns', None)
 - premiums
 '''
 
+
 insurance_df = pd.read_csv('insurance.csv')
 print("We look at a sample of the data: \n", insurance_df.head())
 print("We also look at some additional data information: \n", insurance_df.info())
